@@ -1,0 +1,22 @@
+{
+    "name": "vrann/fbchatbot",
+    "description": "Library provides integration with Facebook Messenger chat and allows to write new bots",
+    "type": "library",
+    "require": {
+        "monolog/monolog": "^1.21"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eugene Tulika",
+            "email": "vranen@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vrann\\FbChatbot\\": "src/Vrann/FbChatbot"
+        }
+    },
+
+    "minimum-stability": "alpha"
+}
