@@ -53,20 +53,23 @@ class Http implements Transport {
         $queryParams = [
             'access_token' => $this->accessToken
         ];
+        $url = $this->callBackUrl . "?" . http_build_query($queryParams);
+        $this->logger->debug($url);
 
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $this->callBackUrl . "?" . http_build_query($queryParams));
-        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $messageBody);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $server_output = curl_exec ($ch);
-        curl_close ($ch);
+        $serverOutput = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
 
         $this->logger->info($messageBody);
-        if ($server_output == "OK") {
-            $this->logger->info("Message has been sent " . $messageBody);
+        if ($httpCode == 200) {
+            $this->logger->info("Message has been sent");
         } else {
-            $this->logger->critical($server_output);
+            $this->logger->critical($serverOutput);
             throw new CommunicationException("Cannot send message");
         }
     }

@@ -37,6 +37,7 @@ class MessageBuilder {
     public function setMessageText($messageText)
     {
         $this->messageText = $messageText;
+        return $this;
     }
 
     /**

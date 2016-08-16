@@ -5,15 +5,14 @@
 
 include __DIR__ . "/vendor/autoload.php";
 
-$PASS_PHRASE = getenv('fb_pass_phrase');
-$ACCESS_TOKEN = getenv('fb_access_token');
-
+$PASS_PHRASE = getenv('FB_PASS_PHRASE');
+$ACCESS_TOKEN = getenv('FB_ACCESS_TOKEN');
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 use Vrann\FbChatbot\Bot;
 
 $logger = new Logger('my_logger');
-$logger->pushHandler(new StreamHandler(__DIR__ . '/my_app.log', Logger::DEBUG));
+$logger->pushHandler(new StreamHandler('/tmp/fbchatbot.log', Logger::DEBUG));
 $logger->addInfo('Callback activated');
 
 if (!empty($_REQUEST)) {
