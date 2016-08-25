@@ -1,6 +1,5 @@
 <?php
 namespace Vrann\FbChatBot\Message;
-use Vrann\FbChatBot\Message\MessageStructureException;
 
 /**
  * Fluent builder for all the messages
@@ -85,8 +84,12 @@ class FluentBuilder implements MessageBuilder
         return $this->attachment;
     }
 
+    /**
+     * @throws \Vrann\FbChatBot\Message\MessageStructureException
+     */
     public function quickReply()
     {
+        throw new MessageStructureException('Quick Replies are not supported by this library yet');
         if ($this->type == self::TEXT) {
             throw new MessageStructureException(
                 'Message of Text type cannot have quick replies. Use different Builder instance'
@@ -94,7 +97,6 @@ class FluentBuilder implements MessageBuilder
         } else {
             $this->type = self::QUICK_REPLY;
         }
-        return $this->attachment;
     }
 
     /**

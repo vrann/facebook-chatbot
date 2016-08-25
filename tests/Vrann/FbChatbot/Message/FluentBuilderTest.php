@@ -228,20 +228,7 @@ class FluentBuilderTest extends \PHPUnit_Framework_TestCase
 
     public function testQuickReplyMessage()
     {
-        $this->markTestIncomplete('Requires more implementation');
+        $this->markTestIncomplete('Quick replies are not supported yet');
         //Quick Reply Message
-        $messageBuilder = new FluentBuilder();
-        $messageBuilder->setRecipientId("TEST_ID")
-            ->quickReply()
-            ->setType('template')
-            ->template()
-            ->setType('generic')
-            ->setText()
-            ->setImage()
-            ->addButton()
-            ->end()
-            ->setPayload('http://test.com')
-            ->end()
-            ->build();
     }
 }
