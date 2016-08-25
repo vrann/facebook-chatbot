@@ -1,5 +1,5 @@
 <?php
-namespace Vrann\FbChatbot;
+namespace Vrann\FbChatBot;
 
 /**
  * Generates response message based on the input

@@ -9,7 +9,7 @@ $PASS_PHRASE = getenv('FB_PASS_PHRASE');
 $ACCESS_TOKEN = getenv('FB_ACCESS_TOKEN');
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
-use Vrann\FbChatbot\Bot;
+use Vrann\FbChatBot\Bot;
 
 $logger = new Logger('my_logger');
 $logger->pushHandler(new StreamHandler('/tmp/fbchatbot.log', Logger::DEBUG));
@@ -33,17 +33,17 @@ if (!empty($_REQUEST)) {
     }
     $logger->addDebug($jsonString);
     $client = new Bot(
-        new \Vrann\FbChatbot\EchoGenerator(),
-        new \Vrann\FbChatbot\MessageBuilder(),
-        new \Vrann\FbChatbot\Transport\Http(
+        new \Vrann\FbChatBot\EchoGenerator(),
+        new \Vrann\FbChatBot\MessageBuilder(),
+        new \Vrann\FbChatBot\Transport\Http(
             $ACCESS_TOKEN,
             $logger
         )
     );
 
     try {
-        $client->react(new \Vrann\FbChatbot\Input($jsonString));
-    } catch (\Vrann\FbChatbot\CommunicationException $e) {
+        $client->react(new \Vrann\FbChatBot\Input($jsonString));
+    } catch (\Vrann\FbChatBot\CommunicationException $e) {
         $logger->error($e->getMessage());
     }
 }

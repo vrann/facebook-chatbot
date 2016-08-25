@@ -1,9 +1,9 @@
 <?php
-namespace Vrann\FbChatbot\Transport;
+namespace Vrann\FbChatBot\Transport;
 
 use Psr\Log\LoggerInterface;
-use Vrann\FbChatbot\Transport;
-use Vrann\FbChatbot\CommunicationException;
+use Vrann\FbChatBot\Transport;
+use Vrann\FbChatBot\CommunicationException;
 
 /**
  * Class Transport\Http implements transport layer to send messages back to FB messenger

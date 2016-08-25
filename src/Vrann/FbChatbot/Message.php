@@ -1,5 +1,5 @@
 <?php
-namespace Vrann\FbChatbot;
+namespace Vrann\FbChatBot;
 
 /**
  * Created by PhpStorm.

@@ -1,5 +1,5 @@
 <?php
-namespace Vrann\FbChatbot;
+namespace Vrann\FbChatBot;
 
 /**
  * Provides interface to facebook chat message input

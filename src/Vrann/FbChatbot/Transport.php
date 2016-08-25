@@ -1,5 +1,5 @@
 <?php
-namespace Vrann\FbChatbot;
+namespace Vrann\FbChatBot;
 
 /**
  * Defines API to send out response messages

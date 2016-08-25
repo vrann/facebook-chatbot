@@ -1,5 +1,5 @@
 <?php
-namespace Vrann\FbChatbot;
+namespace Vrann\FbChatBot;
 
 /**
  * Chat Bot which reacts to Facebook Messages
