@@ -41,7 +41,8 @@ class Input
      * @return void
      * @throws CommunicationException
      */
-    private function parseInput() {
+    private function parseInput()
+    {
         $content = json_decode($this->json, true);
         if (!isset($content['entry']) || !count($content['entry']) > 0) {
             throw new CommunicationException("Wrong input: No Entry");

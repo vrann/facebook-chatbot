@@ -34,7 +34,6 @@ if (!empty($_REQUEST)) {
     $logger->addDebug($jsonString);
     $client = new Bot(
         new \Vrann\FbChatBot\EchoGenerator(),
-        new \Vrann\FbChatBot\MessageBuilder(),
         new \Vrann\FbChatBot\Transport\Http(
             $ACCESS_TOKEN,
             $logger

@@ -1,6 +1,6 @@
 {
     "name": "vrann/fbchatbot",
-    "description": "Library provides integration with Facebook Messenger chat and allows to write new bots",
+    "description": "Framework to create Facebook Messenger Bots on PHP",
     "type": "library",
     "require": {
         "monolog/monolog": "^1.21"

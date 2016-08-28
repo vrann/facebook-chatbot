@@ -17,23 +17,15 @@ class Bot {
     private $transport;
 
     /**
-     * @var MessageBuilder
-     */
-    private $messageBuilder;
-
-    /**
      * @param MessageGenerator $messageGenerator
-     * @param MessageBuilder $messageBuilder
      * @param Transport $transport
      */
     public function __construct(
         MessageGenerator $messageGenerator,
-        MessageBuilder $messageBuilder,
         Transport $transport
     ) {
         $this->messageGenerator = $messageGenerator;
         $this->transport = $transport;
-        $this->messageBuilder = $messageBuilder;
     }
 
     /**
