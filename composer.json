@@ -3,7 +3,7 @@
     "description": "Framework to create Facebook Messenger Bots on PHP",
     "type": "library",
     "require": {
-        "monolog/monolog": "^1.21"
+        "monolog/monolog": "1.*"
     },
     "require-dev": {
         "phpunit/phpunit": "5.5.*"
