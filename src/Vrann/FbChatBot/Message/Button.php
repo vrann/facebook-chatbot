@@ -64,7 +64,7 @@ class Button implements MessageBuilder, EmbeddedElement
      */
     public function setUrl($url)
     {
-        if (isset($this->data['type']) && $this->data['type'] !== self::WEB_URL) {
+        if (isset($this->data['type']) && $this->data['type'] !== null && $this->data['type'] !== self::WEB_URL) {
             throw new MessageStructureException('The URL is used just for WEB_URL button type');
         }
         $this->data['type'] = self::WEB_URL;

@@ -1,7 +1,7 @@
 # Facebook Chat Bot
  
 This is the framework to create Facebook Messenger Bots on PHP. It provides interfaces to register message handlers, 
-and builders which allows to construct new messages. It has HTTP transport adapter to communicate directly with 
+and builders which allows to construct response messages of complex structure. It has HTTP transport adapter to communicate directly with 
 Facebook API. Sample callback is provided as a reference to create own endpoint which receives messages from the Facebook
  
 ## Installation
